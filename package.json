@@ -1,0 +1,14 @@
+{
+	"name":         "svg-world-map",
+	"description":  "Show a location on a world map.",
+	"version":      "0.1.0",
+	"main":         "index.js",
+	"files":        ["index.js"],
+	"keywords":     ["svg", "world", "map", "location", "pin", "dataviz", "vector"],
+	"author":       "Jannis R <mail@jannisr.de>",
+	"homepage":     "http://derhuerst.github.io/svg-world-map/",
+	"repository":   "derhuerst/svg-world-map",
+	"bugs":         "https://github.com/derhuerst/svg-world-map/issues",
+	"license":      "ISC",
+	"engines":      {"node": ">=6"}
+}
