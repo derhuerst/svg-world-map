@@ -31,24 +31,20 @@ johan/world.geo.json/master/countries.geo.json`)
 .then((res) => res.json())
 .then((res) => {
 
-	const world = simplify(res, .17, true)
-	const [west, _, east, north] = bbox(world)
+	const [west, _, east, north] = bbox(res)
 	const south = -39
+	const box = bboxPolygon([west, south, east, north])
 
+	const world = simplify(res, .17, true)
 	const polylines = svgify(world, {projection})
 
-	const [left, top] = svgify.defaults.projection([west, north])
-	const [right, bottom] = svgify.defaults.projection([east, south])
+	const [left, top] = projection([west, north])
+	const [right, bottom] = projection([east, south])
 	const width = right - left
 	const height = bottom - top
 	const ratio = width / height
 
-	const symbol = h('symbol', {
-		id: 'world-map',
-		viewBox: [left, top, width, height].join(',')
-	}, polylines)
-
-	const data = toJSON(symbol)
+	const data = toJSON(polylines)
 	const meta = {left, top, right, bottom, width, height}
 
 	return Promise.all([write('data.json', data), write('meta.json', meta)])

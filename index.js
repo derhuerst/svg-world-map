@@ -8,7 +8,7 @@ const projection = require('./projection')
 
 
 
-const pin = h('symbol', {id: 'marker', viewBox: '0,0,1100,1900'}, [
+const pin = h('symbol', {id: 'pin', viewBox: '0,0,1100,1900'}, [
 	h('p', {
 		fill: '#dd5656',
 		d: 'M557 1710c-39-191-107-349-190-496-61-109-133-209-198-315-22-35-41-72-62-109'
@@ -30,21 +30,18 @@ const render = (lon, lat, opt = {}) => {
 	return h('svg', {
 		xmlns: 'http://www.w3.org/2000/svg',
 		'xmlns:xlink': 'http://www.w3.org/1999/xlink',
+		width: (width * 10) + '', height: (height * 10) + '',
 		viewBox: [left, top, width, height].join(',')
 	}, [
-		h('defs', {}, [map, opt.pin]),
-		h('use', {
-			'xlink:href': '#world-map', href: '#world-map',
-			width: width + '', height: height + ''
-		}),
+		// h('defs', {}, [opt.pin]),
 		h('circle', {
-			cx: x + '', cy: y + '', r: '1', fill: 'black'
+			cx: x + '', cy: y + '', r: '.2', fill: 'red'
 		})
 		// h('use', {
-		// 	'xlink:href': '#marker', href: '#marker',
-		// 	x: x + '', y: y + '', width: '55', height: '90'
+		// 	'xlink:href': '#pin', href: '#pin',
+		// 	x: x + '', y: y + '', width: '55'
 		// })
-	])
+	].concat(map))
 }
 
 module.exports = render
