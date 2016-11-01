@@ -49,7 +49,7 @@ johan/world.geo.json/master/countries.geo.json`)
 	}, polylines)
 
 	const data = toJSON(symbol)
-	const meta = {west, south, east, north, ratio}
+	const meta = {left, top, right, bottom, width, height}
 
 	return Promise.all([write('data.json', data), write('meta.json', meta)])
 

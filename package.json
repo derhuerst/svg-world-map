@@ -16,6 +16,7 @@
 	"engines":      {"node": ">=6"},
 	"dependencies": {
 		"projections": "^0.6",
+		"virtual-dom": "^2.1.1",
 		"vdom-as-json": "^1.0.9"
 	},
 	"devDependencies": {
