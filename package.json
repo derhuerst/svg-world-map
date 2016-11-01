@@ -3,7 +3,10 @@
 	"description":  "Show a location on a world map.",
 	"version":      "0.1.0",
 	"main":         "index.js",
-	"files":        ["index.js", "projection.js", "data.json", "meta.json"],
+	"files":        [
+		"index.js", "projection.js",
+		"map.js", "data.json", "meta.json"
+	],
 	"keywords":     ["svg", "world", "map", "location", "pin", "dataviz", "vector"],
 	"author":       "Jannis R <mail@jannisr.de>",
 	"homepage":     "http://derhuerst.github.io/svg-world-map/",
@@ -12,15 +15,15 @@
 	"license":      "ISC",
 	"engines":      {"node": ">=6"},
 	"dependencies": {
-		"projections": "^0.6"
+		"projections": "^0.6",
+		"vdom-as-json": "^1.0.9"
 	},
 	"devDependencies": {
 		"node-fetch": "^1.6.3",
 		"geojson-svgify": "juliuste/geojson-svgify",
 		"@turf/bbox": "^3.5.2",
 		"@turf/simplify": "^3.5.2",
-		"virtual-hyperscript-svg": "^2",
-		"vdom-as-json": "^1.0.9"
+		"virtual-hyperscript-svg": "^2"
 	},
 	"scripts": {
 		"build": "node build.js"
