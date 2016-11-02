@@ -21,7 +21,7 @@
 	},
 	"devDependencies": {
 		"node-fetch": "^1.6.3",
-		"geojson-svgify": "juliuste/geojson-svgify",
+		"geojson-svgify": "derhuerst/geojson-svgify",
 		"@turf/bbox": "^3.5.2",
 		"@turf/simplify": "^3.5.2",
 		"virtual-hyperscript-svg": "^2"

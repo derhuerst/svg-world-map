@@ -2,7 +2,7 @@
 
 const h = require('virtual-dom/h')
 
-const {top, left, bottom, right, width, height} = require('./meta.json')
+const meta = require('./meta.json')
 const map = require('./map')
 const projection = require('./projection')
 
@@ -25,13 +25,20 @@ const pin = h('symbol', {id: 'pin', viewBox: '0 0 5 8'}, [
 
 
 const defaults = {
-	pin, width: 1000, sizeOfPin: 8
+	ocean: '#6bf',
+	land: 'white',
+	mapWidth: 500,
+	pin,
+	pinHeight: 8
 }
 
 const render = (lon, lat, opt = {}) => {
 	opt = Object.assign({}, defaults, opt)
 
-	const pinHeight = opt.sizeOfPin
+	const mapWidth = opt.mapWidth
+	const mapHeight = mapWidth * meta.height / meta.width
+
+	const pinHeight = opt.pinHeight
 	const pinWidth = pinRatio * pinHeight
 	let [pinX, pinY] = projection([lon, lat])
 	pinY -= pinHeight
@@ -40,16 +47,28 @@ const render = (lon, lat, opt = {}) => {
 	return h('svg', {
 		xmlns: 'http://www.w3.org/2000/svg',
 		'xmlns:xlink': 'http://www.w3.org/1999/xlink',
-		width: (width * 10) + '', height: (height * 10) + '',
-		viewBox: [left, top, width, height].join(',')
-	}, map.concat([
+		width: mapWidth + '', height: mapHeight + '',
+		viewBox: [meta.left, meta.top, meta.width, meta.height].join(',')
+	}, [].concat(
+		h('style', {}, `
+			.country {
+				fill: ${opt.land};
+				stroke: #555;
+				stroke-width: .1;
+			}
+		`),
+		h('rect', {
+			width: mapWidth + '', height: mapHeight + '',
+			fill: opt.ocean
+		}),
+		map,
 		h('defs', {}, [opt.pin]),
 		h('use', {
 			'xlink:href': '#pin', href: '#pin',
 			x: pinX + '', y: pinY + '',
 			width: pinWidth + '', height: pinHeight + ''
 		})
-	]))
+	))
 }
 
 module.exports = render

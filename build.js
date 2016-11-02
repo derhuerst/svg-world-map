@@ -36,7 +36,7 @@ johan/world.geo.json/master/countries.geo.json`)
 	const box = bboxPolygon([west, south, east, north])
 
 	const world = simplify(res, .17, true)
-	const polylines = svgify(world, {projection})
+	const polylines = svgify(world, {projection, className: 'country'})
 
 	const [left, top] = projection([west, north])
 	const [right, bottom] = projection([east, south])
