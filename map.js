@@ -3,6 +3,6 @@
 const data = require('./data.json')
 const toVdom = require('vdom-as-json/fromJson')
 
-const symbol = toVdom(data)
+const map = toVdom(data)
 
-module.exports = symbol
+module.exports = map

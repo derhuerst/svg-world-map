@@ -3,8 +3,8 @@
 const fs = require('fs')
 const path = require('path')
 const fetch = require('node-fetch')
-const svgify = require('geojson-svgify')
 const bbox = require('@turf/bbox')
+const svgify = require('geojson-svgify')
 const simplify = require('@turf/simplify')
 const h = require('virtual-hyperscript-svg')
 const toJSON = require('vdom-as-json/toJson')
@@ -31,9 +31,11 @@ johan/world.geo.json/master/countries.geo.json`)
 .then((res) => res.json())
 .then((res) => {
 
-	const [west, _, east, north] = bbox(res)
-	const south = -39
-	const box = bboxPolygon([west, south, east, north])
+	const box = bbox(res)
+	const west = box[0]
+	const south = -57
+	const east = box[2]
+	const north = 77.5
 
 	const world = simplify(res, .17, true)
 	const polylines = svgify(world, {projection, className: 'country'})
