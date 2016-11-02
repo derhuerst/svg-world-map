@@ -2,7 +2,7 @@
 
 **Render a world map with a pin at a specific location.**
 
-![an example](https://rawgit.com/derhuerst/svg-world-map/example/berlin.svg)
+![an example](https://github.com/derhuerst/svg-world-map/raw/master/example/berlin.svg)
 
 [![npm version](https://img.shields.io/npm/v/svg-world-map.svg)](https://www.npmjs.com/package/svg-world-map)
 [![build status](https://img.shields.io/travis/derhuerst/svg-world-map.svg)](https://travis-ci.org/derhuerst/svg-world-map)
@@ -19,6 +19,37 @@ Note that because shapes of all countries are quite a lot of data, this module w
 
 ```shell
 npm install svg-world-map
+```
+
+
+## Usage
+
+```js
+const map = require('svg-world-map')
+const stringify = require('virtual-dom-stringify')
+
+const myMap = map(81.8, 28.4) // Nepal
+
+process.stdout.write(stringify(myMap))
+```
+
+
+## API
+
+```
+maps(longitude, latitude, [opt])
+```
+
+`opt` is optional and has the following default values:
+
+```js
+const defaults = {
+	ocean: '#8df', // color of the ocean
+	land: 'white', // color of the land
+	mapWidth: 500, // width of the `<svg>`
+	pin, // virtual dom node with the pin
+	pinHeight: 8 // relative to map viewBox
+}
 ```
 
 
