@@ -1,12 +1,18 @@
 # svg-world-map
 
-**Show a location on a world map.**
+**Render a world map with a pin at a specific location.**
+
+![an example](https://rawgit.com/derhuerst/svg-world-map/example/berlin.svg)
 
 [![npm version](https://img.shields.io/npm/v/svg-world-map.svg)](https://www.npmjs.com/package/svg-world-map)
 [![build status](https://img.shields.io/travis/derhuerst/svg-world-map.svg)](https://travis-ci.org/derhuerst/svg-world-map)
 [![dependency status](https://img.shields.io/david/derhuerst/svg-world-map.svg)](https://david-dm.org/derhuerst/svg-world-map)
 [![dev dependency status](https://img.shields.io/david/dev/derhuerst/svg-world-map.svg)](https://david-dm.org/derhuerst/svg-world-map#info=devDependencies)
 ![ISC-licensed](https://img.shields.io/github/license/derhuerst/svg-world-map.svg)
+
+`svg-world-map` returns a [virtual-dom](https://github.com/Matt-Esch/virtual-dom#dom-model) `<svg>` node. You can either stringify it into a file or embed it into your Frontend stack.
+
+Note that because shapes of all countries are quite a lot of data, this module weighs **roughly `43k`** when [browserified](http://browserify.org), [minified](https://github.com/mishoo/UglifyJS2#uglifyjs-2) and gzipped.
 
 
 ## Installing
