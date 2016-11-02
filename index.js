@@ -8,40 +8,48 @@ const projection = require('./projection')
 
 
 
-const pin = h('symbol', {id: 'pin', viewBox: '0,0,1100,1900'}, [
-	h('p', {
-		fill: '#dd5656',
-		d: 'M557 1710c-39-191-107-349-190-496-61-109-133-209-198-315-22-35-41-72-62-109'
-		+ 'a498 498 0 0 1 3-532 517 517 0 0 1 363-236c136-20 263 14 353 67'
-		+ 'a510 510 0 0 1 232 582c-13 43-34 79-53 118-36 76-82 145-127 215-137'
-		+ ' 206-265 417-321 706z'
-	}),
-    h('circle', {r: '183', cx: '560', cy: '490', fill: 'black'})
+const pinRatio = 5 / 8
+const pin = h('symbol', {id: 'pin', viewBox: '0 0 5 8'}, [
+    h('ellipse', {
+    	rx: '.5', ry: '.3',
+    	cy: '7.7', cx: '2.5',
+    	fill: '#555'
+    }),
+    h('path', {
+    	d: 'M2.5 7.7 L 4.665 3.75 A 2.5 2.5 0 1 0 0.335 3.75 L 2.5 7.7',
+    	fill: '#cd4646'
+    }),
+    h('circle', {r: '.9', cy: '2.5', cx: '2.5', fill: 'black'})
 ])
 
 
 
-const defaults = {pin, width: 1000}
+const defaults = {
+	pin, width: 1000, sizeOfPin: 8
+}
 
 const render = (lon, lat, opt = {}) => {
 	opt = Object.assign({}, defaults, opt)
-	const [x, y] = projection([lon, lat])
+
+	const pinHeight = opt.sizeOfPin
+	const pinWidth = pinRatio * pinHeight
+	let [pinX, pinY] = projection([lon, lat])
+	pinY -= pinHeight
+	pinX -= pinWidth / 2
 
 	return h('svg', {
 		xmlns: 'http://www.w3.org/2000/svg',
 		'xmlns:xlink': 'http://www.w3.org/1999/xlink',
 		width: (width * 10) + '', height: (height * 10) + '',
 		viewBox: [left, top, width, height].join(',')
-	}, [
-		// h('defs', {}, [opt.pin]),
-		h('circle', {
-			cx: x + '', cy: y + '', r: '.2', fill: 'red'
+	}, map.concat([
+		h('defs', {}, [opt.pin]),
+		h('use', {
+			'xlink:href': '#pin', href: '#pin',
+			x: pinX + '', y: pinY + '',
+			width: pinWidth + '', height: pinHeight + ''
 		})
-		// h('use', {
-		// 	'xlink:href': '#pin', href: '#pin',
-		// 	x: x + '', y: y + '', width: '55'
-		// })
-	].concat(map))
+	]))
 }
 
 module.exports = render
