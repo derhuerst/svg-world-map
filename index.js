@@ -25,7 +25,7 @@ const pin = h('symbol', {id: 'pin', viewBox: '0 0 5 8'}, [
 
 
 const defaults = {
-	ocean: '#8df', // color of the ocean
+	ocean: '#476F9C', // color of the ocean
 	land: 'white', // color of the land
 	mapWidth: 500, // width of the `<svg>`
 	pin, // virtual dom node with the pin
