@@ -26,10 +26,15 @@
 		"@turf/simplify": "^3.5.2",
 		"virtual-hyperscript-svg": "^2",
 		"virtual-dom-stringify": "^3.0.1",
-		"disparity": "^2"
+		"disparity": "^2",
+		"browserify": "^13.1.1",
+		"uglify-js": "^2.7.4"
 	},
 	"scripts": {
 		"build": "node build.js",
-		"test": "node test.js"
+		"test": "node test.js",
+		"demo:bundle": "browserify -t es2020 docs/demo.js > docs/bundle.js",
+		"demo:minify": "uglifyjs -mc --screw-ie8 -- docs/bundle.js > docs/bundle.min.js",
+		"demo": "npm run demo:bundle && npm run demo:minify"
 	}
 }

@@ -1,6 +1,6 @@
-# svg-world-map
+# [svg-world-map](http://jannisr.de/svg-world-map/)
 
-**Render a world map with a pin at a specific location.**
+**Render a world map with a pin at a specific location.** Fiddle with it on [the website](http://jannisr.de/svg-world-map/).
 
 ![map with pin at Berlin](https://rawgit.com/derhuerst/svg-world-map/master/example/berlin.svg)
 
