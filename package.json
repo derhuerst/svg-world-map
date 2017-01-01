@@ -17,7 +17,7 @@
 	"dependencies": {
 		"projections": "^0.6",
 		"virtual-dom": "^2.1.1",
-		"vdom-as-json": "^1.0.9"
+		"vdom-as-json": "^1.0.10"
 	},
 	"devDependencies": {
 		"node-fetch": "^1.6.3",
