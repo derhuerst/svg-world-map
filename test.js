@@ -2,7 +2,6 @@
 
 const fs = require('fs')
 const path = require('path')
-const h = require('virtual-hyperscript-svg')
 const toHTML = require('virtual-dom-stringify')
 const disparity = require('disparity')
 

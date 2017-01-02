@@ -27,7 +27,7 @@ const write = (filename, data) => {
 
 
 fetch(`https://raw.githubusercontent.com/\
-johan/world.geo.json/master/countries.geo.json`)
+johan/world.geo.json/34c96bb/countries.geo.json`)
 .then((res) => res.json())
 .then((res) => {
 
