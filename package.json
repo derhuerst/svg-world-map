@@ -15,7 +15,7 @@
 	"license":      "ISC",
 	"engines":      {"node": ">=6"},
 	"dependencies": {
-		"projections": "^0.6",
+		"projections": "^1.0.0",
 		"virtual-dom": "^2.1.1",
 		"vdom-as-json": "^1.0.9"
 	},
@@ -28,7 +28,8 @@
 		"virtual-dom-stringify": "^3.0.1",
 		"disparity": "^2",
 		"browserify": "^14.1.0",
-		"uglify-js": "^2.7.4"
+		"es2020": "^1.1.9",
+		"uglify-js": "mishoo/UglifyJS2#harmony"
 	},
 	"scripts": {
 		"build": "node build.js",

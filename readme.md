@@ -9,6 +9,7 @@
 [![dependency status](https://img.shields.io/david/derhuerst/svg-world-map.svg)](https://david-dm.org/derhuerst/svg-world-map)
 [![dev dependency status](https://img.shields.io/david/dev/derhuerst/svg-world-map.svg)](https://david-dm.org/derhuerst/svg-world-map#info=devDependencies)
 ![ISC-licensed](https://img.shields.io/github/license/derhuerst/svg-world-map.svg)
+[![chat on gitter](https://badges.gitter.im/derhuerst.svg)](https://gitter.im/derhuerst)
 
 `svg-world-map` returns a [virtual-dom](https://github.com/Matt-Esch/virtual-dom#dom-model) `<svg>` node. You can either stringify it into a file or embed it into your Frontend stack.
 
@@ -51,6 +52,12 @@ const defaults = {
 	pinHeight: 8 // relative to map viewBox
 }
 ```
+
+
+## See also
+
+- [`svg-patterns`](https://github.com/derhuerst/svg-patterns) – Create SVG patterns programmatically to visualize data.
+- [`svg-radar-chart`](https://github.com/derhuerst/svg-radar-chart) – A reusable radar chart in SVG.
 
 
 ## Contributing
