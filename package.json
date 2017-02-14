@@ -15,7 +15,7 @@
 	"license":      "ISC",
 	"engines":      {"node": ">=6"},
 	"dependencies": {
-		"projections": "^0.6",
+		"projections": "^1.0.0",
 		"virtual-dom": "^2.1.1",
 		"vdom-as-json": "^1.0.9"
 	},
