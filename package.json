@@ -22,7 +22,7 @@
 	"devDependencies": {
 		"node-fetch": "^1.6.3",
 		"geojson-svgify": "^0.4",
-		"@turf/bbox": "^3.5.2",
+		"@turf/bbox": "^4.0.0",
 		"@turf/simplify": "^3.5.2",
 		"virtual-hyperscript-svg": "^2",
 		"virtual-dom-stringify": "^3.0.1",
