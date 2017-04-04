@@ -27,7 +27,7 @@
 		"virtual-hyperscript-svg": "^2",
 		"virtual-dom-stringify": "^3.0.1",
 		"disparity": "^2",
-		"browserify": "^14.1.0",
+		"browserify": "14.1.0",
 		"es2020": "^1.1.9",
 		"uglify-js": "mishoo/UglifyJS2#harmony"
 	},
