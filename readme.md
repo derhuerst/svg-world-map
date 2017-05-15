@@ -15,6 +15,8 @@
 
 Note that because shapes of all countries are quite a lot of data, this module weighs **roughly `43k`** when [browserified](http://browserify.org), [minified](https://github.com/mishoo/UglifyJS2#uglifyjs-2) and gzipped.
 
+The data is from [world.geo.json](https://github.com/johan/world.geo.json).
+
 
 ## Installing
 
