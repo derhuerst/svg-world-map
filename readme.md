@@ -64,4 +64,6 @@ const defaults = {
 
 ## Contributing
 
+`npm test` is a regression test: It compares the generated output, to a `example/berlin.svg`, which has been manually checked by me. If you introduce a change that changes the output, *check it manually* and commit it as `example/berlin.svg`.
+
 If you **have a question**, **found a bug** or want to **propose a feature**, have a look at [the issues page](https://github.com/derhuerst/svg-world-map/issues).

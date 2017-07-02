@@ -29,7 +29,7 @@
 		"disparity": "^2",
 		"browserify": "^14.1.0",
 		"es2020": "^1.1.9",
-		"uglify-js": "mishoo/UglifyJS2#harmony"
+		"uglify-es": "3.0.23"
 	},
 	"scripts": {
 		"build": "node build.js",
