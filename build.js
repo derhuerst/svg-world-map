@@ -38,7 +38,10 @@ johan/world.geo.json/34c96bb/countries.geo.json`)
 	const north = 77.5
 
 	const world = simplify(res, .17, true)
-	const polylines = svgify(world, {projection, className: 'country'})
+	const polylines = svgify(world, {
+		projection,
+		computeProps: () => ({className: 'country'})
+	})
 
 	const [left, top] = projection([west, north])
 	const [right, bottom] = projection([east, south])
