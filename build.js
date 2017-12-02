@@ -29,15 +29,15 @@ const write = (filename, data) => {
 fetch(`https://raw.githubusercontent.com/\
 johan/world.geo.json/34c96bb/countries.geo.json`)
 .then((res) => res.json())
-.then((res) => {
+.then((world) => {
 
-	const box = bbox(res)
+	const box = bbox(world)
 	const west = box[0]
 	const south = -57
 	const east = box[2]
 	const north = 77.5
 
-	const world = simplify(res, .17, true)
+	simplify(world, {tolerance: .17, highQuality: true, mutate: true})
 	const polylines = svgify(world, {
 		projection,
 		computeProps: () => ({className: 'country'})
