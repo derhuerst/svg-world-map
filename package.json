@@ -34,7 +34,7 @@
 	"scripts": {
 		"build": "node build.js",
 		"test": "node test.js",
-		"demo:bundle": "browserify -t es2020 docs/demo.js > docs/bundle.js",
+		"demo:bundle": "browserify -g es2020 docs/demo.js > docs/bundle.js",
 		"demo:minify": "uglifyjs -mc --screw-ie8 -- docs/bundle.js > docs/bundle.min.js",
 		"demo": "npm run demo:bundle && npm run demo:minify"
 	}
