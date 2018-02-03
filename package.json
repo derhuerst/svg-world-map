@@ -20,7 +20,7 @@
 		"vdom-as-json": "^1.0.9"
 	},
 	"devDependencies": {
-		"node-fetch": "^1.6.3",
+		"node-fetch": "^2.0.0",
 		"geojson-svgify": "^0.5",
 		"@turf/bbox": "^5.0.0",
 		"@turf/simplify": "^5.0.4",
