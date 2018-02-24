@@ -1,6 +1,6 @@
-# [svg-world-map](http://jannisr.de/svg-world-map/)
+# [svg-world-map](https://derhuerst.github.io/svg-world-map/)
 
-**Render a world map with a pin at a specific location.** Fiddle with it on [the website](http://jannisr.de/svg-world-map/).
+**Render a world map with a pin at a specific location.** Fiddle with it on [the website](https://derhuerst.github.io/svg-world-map/).
 
 ![map with pin at Berlin](https://rawgit.com/derhuerst/svg-world-map/master/example/berlin.svg)
 
@@ -10,6 +10,7 @@
 [![dev dependency status](https://img.shields.io/david/dev/derhuerst/svg-world-map.svg)](https://david-dm.org/derhuerst/svg-world-map#info=devDependencies)
 ![ISC-licensed](https://img.shields.io/github/license/derhuerst/svg-world-map.svg)
 [![chat on gitter](https://badges.gitter.im/derhuerst.svg)](https://gitter.im/derhuerst)
+[![support me on Patreon](https://img.shields.io/badge/support%20me-on%20patreon-fa7664.svg)](https://patreon.com/derhuerst)
 
 `svg-world-map` returns a [virtual-dom](https://github.com/Matt-Esch/virtual-dom#dom-model) `<svg>` node. You can either stringify it into a file or embed it into your Frontend stack.
 
@@ -40,7 +41,7 @@ process.stdout.write(stringify(myMap))
 ## API
 
 ```
-maps(longitude, latitude, [opt])
+map(longitude, latitude, [opt])
 ```
 
 `opt` is optional and has the following default values:
