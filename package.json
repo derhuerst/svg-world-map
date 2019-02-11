@@ -1,7 +1,7 @@
 {
 	"name": "svg-world-map",
 	"description": "Show a location on a world map.",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"main": "index.js",
 	"files": [
 		"index.js",
