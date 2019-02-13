@@ -41,7 +41,7 @@
 		"geojson-svgify": "^0.5",
 		"node-fetch": "^2.0.0",
 		"uglify-es": "^3.0.25",
-		"virtual-dom-stringify": "^3.0.1",
+		"vdom-to-html": "^2.3.1",
 		"virtual-hyperscript-svg": "^2"
 	},
 	"scripts": {
