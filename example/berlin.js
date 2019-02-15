@@ -1,6 +1,6 @@
 'use strict'
 
-const toHTML = require('virtual-dom-stringify')
+const toHTML = require('vdom-to-html')
 
 const map = require('..')
 
