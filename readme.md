@@ -2,7 +2,7 @@
 
 **Render a world map with a pin at a specific location.** Fiddle with it on [the website](https://derhuerst.github.io/svg-world-map/).
 
-![map with pin at Berlin](https://rawgit.com/derhuerst/svg-world-map/master/example/berlin.svg)
+![map with pin at Berlin](example/berlin.svg)
 
 [![npm version](https://img.shields.io/npm/v/svg-world-map.svg)](https://www.npmjs.com/package/svg-world-map)
 [![build status](https://img.shields.io/travis/derhuerst/svg-world-map.svg)](https://travis-ci.org/derhuerst/svg-world-map)
