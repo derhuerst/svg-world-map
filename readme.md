@@ -30,7 +30,7 @@ npm install svg-world-map
 
 ```js
 const map = require('svg-world-map')
-const stringify = require('virtual-dom-stringify')
+const stringify=require('vdom-to-html')
 
 const myMap = map(81.8, 28.4) // Nepal
 
