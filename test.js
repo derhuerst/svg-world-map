@@ -2,7 +2,7 @@
 
 const fs = require('fs')
 const path = require('path')
-const toHTML = require('virtual-dom-stringify')
+const toHTML = require('vdom-to-html')
 const disparity = require('disparity')
 
 const map = require('.')
