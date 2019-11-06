@@ -36,7 +36,7 @@
 		"@turf/bbox": "^6.0.0",
 		"@turf/simplify": "^5.0.4",
 		"browserify": "^16.0.0",
-		"disparity": "^2",
+		"disparity": "^3.0.0",
 		"es2020": "^1.1.9",
 		"geojson-svgify": "^0.5",
 		"node-fetch": "^2.0.0",
