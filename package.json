@@ -1,54 +1,58 @@
 {
-	"name": "svg-world-map",
-	"description": "Show a location on a world map.",
-	"version": "1.0.1",
-	"main": "index.js",
-	"files": [
-		"index.js",
-		"projection.js",
-		"map.js",
-		"data.json",
-		"meta.json"
-	],
-	"keywords": [
-		"svg",
-		"world",
-		"map",
-		"location",
-		"pin",
-		"dataviz",
-		"vector"
-	],
-	"author": "Jannis R <mail@jannisr.de>",
-	"homepage": "http://derhuerst.github.io/svg-world-map/",
-	"repository": "derhuerst/svg-world-map",
-	"bugs": "https://github.com/derhuerst/svg-world-map/issues",
-	"license": "ISC",
-	"engines": {
-		"node": ">=6"
-	},
-	"dependencies": {
-		"projections": "^1.0.0",
-		"virtual-dom": "^2.1.1",
-		"vdom-as-json": "^1.0.9"
-	},
-	"devDependencies": {
-		"@turf/bbox": "^6.0.0",
-		"@turf/simplify": "^5.0.4",
-		"browserify": "^16.0.0",
-		"disparity": "^2",
-		"es2020": "^1.1.9",
-		"geojson-svgify": "^0.5",
-		"node-fetch": "^2.0.0",
-		"uglify-es": "^3.0.25",
-		"virtual-dom-stringify": "^3.0.1",
-		"virtual-hyperscript-svg": "^2"
-	},
-	"scripts": {
-		"build": "node build.js",
-		"test": "node test.js",
-		"demo:bundle": "browserify -g es2020 docs/demo.js > docs/bundle.js",
-		"demo:minify": "uglifyjs -mc --screw-ie8 -- docs/bundle.js > docs/bundle.min.js",
-		"demo": "npm run demo:bundle && npm run demo:minify"
-	}
+  "name": "svg-world-map",
+  "description": "Show a location on a world map.",
+  "version": "1.0.1",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "projection.js",
+    "map.js",
+    "data.json",
+    "meta.json"
+  ],
+  "keywords": [
+    "svg",
+    "world",
+    "map",
+    "location",
+    "pin",
+    "dataviz",
+    "vector"
+  ],
+  "author": "Jannis R <mail@jannisr.de>",
+  "homepage": "http://derhuerst.github.io/svg-world-map/",
+  "repository": "derhuerst/svg-world-map",
+  "bugs": "https://github.com/derhuerst/svg-world-map/issues",
+  "license": "ISC",
+  "engines": {
+    "node": ">=6"
+  },
+  "dependencies": {
+    "projections": "^1.0.0",
+    "virtual-dom": "^2.1.1",
+    "vdom-as-json": "^1.0.9",
+    "snyk": "^1.320.2"
+  },
+  "devDependencies": {
+    "@turf/bbox": "^6.0.0",
+    "@turf/simplify": "^5.0.4",
+    "browserify": "^16.0.0",
+    "disparity": "^2",
+    "es2020": "^1.1.9",
+    "geojson-svgify": "^0.5",
+    "node-fetch": "^2.0.0",
+    "uglify-es": "^3.0.25",
+    "virtual-dom-stringify": "^3.0.1",
+    "virtual-hyperscript-svg": "^2"
+  },
+  "scripts": {
+    "build": "node build.js",
+    "test": "node test.js",
+    "demo:bundle": "browserify -g es2020 docs/demo.js > docs/bundle.js",
+    "demo:minify": "uglifyjs -mc --screw-ie8 -- docs/bundle.js > docs/bundle.min.js",
+    "demo": "npm run demo:bundle && npm run demo:minify",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
