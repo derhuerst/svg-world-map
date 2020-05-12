@@ -1,0 +1,80 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.14.1
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  SNYK-JS-LODASH-567746:
+    - es2020 > babel-core > lodash:
+        patched: '2020-05-12T04:55:41.152Z'
+    - es2020 > babel-core > babel-types > lodash:
+        patched: '2020-05-12T04:55:41.152Z'
+    - es2020 > babel-core > babel-generator > lodash:
+        patched: '2020-05-12T04:55:41.152Z'
+    - es2020 > babel-core > babel-traverse > lodash:
+        patched: '2020-05-12T04:55:41.152Z'
+    - es2020 > babel-core > babel-template > lodash:
+        patched: '2020-05-12T04:55:41.152Z'
+    - es2020 > babel-core > babel-register > lodash:
+        patched: '2020-05-12T04:55:41.152Z'
+    - es2020 > babel-preset-es2020 > babel-plugin-transform-es2015-block-scoping > lodash:
+        patched: '2020-05-12T04:55:41.152Z'
+    - es2020 > babel-core > babel-generator > babel-types > lodash:
+        patched: '2020-05-12T04:55:41.152Z'
+    - es2020 > babel-core > babel-traverse > babel-types > lodash:
+        patched: '2020-05-12T04:55:41.152Z'
+    - es2020 > babel-core > babel-template > babel-types > lodash:
+        patched: '2020-05-12T04:55:41.152Z'
+    - es2020 > babel-preset-es2020 > babel-plugin-transform-es2015-block-scoping > babel-types > lodash:
+        patched: '2020-05-12T04:55:41.152Z'
+    - es2020 > babel-core > babel-template > babel-traverse > lodash:
+        patched: '2020-05-12T04:55:41.152Z'
+    - es2020 > babel-preset-es2020 > babel-plugin-transform-es2015-block-scoping > babel-traverse > lodash:
+        patched: '2020-05-12T04:55:41.152Z'
+    - es2020 > babel-core > babel-helpers > babel-template > lodash:
+        patched: '2020-05-12T04:55:41.152Z'
+    - es2020 > babel-preset-es2020 > babel-plugin-transform-es2015-block-scoping > babel-template > lodash:
+        patched: '2020-05-12T04:55:41.152Z'
+    - es2020 > babel-core > babel-register > babel-core > lodash:
+        patched: '2020-05-12T04:55:41.152Z'
+    - es2020 > babel-core > babel-template > babel-traverse > babel-types > lodash:
+        patched: '2020-05-12T04:55:41.152Z'
+    - es2020 > babel-preset-es2020 > babel-plugin-transform-es2015-block-scoping > babel-traverse > babel-types > lodash:
+        patched: '2020-05-12T04:55:41.152Z'
+    - es2020 > babel-core > babel-helpers > babel-template > babel-types > lodash:
+        patched: '2020-05-12T04:55:41.152Z'
+    - es2020 > babel-preset-es2020 > babel-plugin-transform-es2015-block-scoping > babel-template > babel-types > lodash:
+        patched: '2020-05-12T04:55:41.152Z'
+    - es2020 > babel-core > babel-register > babel-core > babel-types > lodash:
+        patched: '2020-05-12T04:55:41.152Z'
+    - es2020 > babel-core > babel-register > babel-core > babel-generator > lodash:
+        patched: '2020-05-12T04:55:41.152Z'
+    - es2020 > babel-core > babel-helpers > babel-template > babel-traverse > lodash:
+        patched: '2020-05-12T04:55:41.152Z'
+    - es2020 > babel-preset-es2020 > babel-plugin-transform-es2015-block-scoping > babel-template > babel-traverse > lodash:
+        patched: '2020-05-12T04:55:41.152Z'
+    - es2020 > babel-core > babel-register > babel-core > babel-traverse > lodash:
+        patched: '2020-05-12T04:55:41.152Z'
+    - es2020 > babel-core > babel-register > babel-core > babel-template > lodash:
+        patched: '2020-05-12T04:55:41.152Z'
+    - es2020 > babel-core > babel-register > babel-core > babel-generator > babel-types > lodash:
+        patched: '2020-05-12T04:55:41.152Z'
+    - es2020 > babel-core > babel-helpers > babel-template > babel-traverse > babel-types > lodash:
+        patched: '2020-05-12T04:55:41.152Z'
+    - es2020 > babel-preset-es2020 > babel-plugin-transform-es2015-block-scoping > babel-template > babel-traverse > babel-types > lodash:
+        patched: '2020-05-12T04:55:41.152Z'
+    - es2020 > babel-core > babel-register > babel-core > babel-traverse > babel-types > lodash:
+        patched: '2020-05-12T04:55:41.152Z'
+    - es2020 > babel-core > babel-register > babel-core > babel-template > babel-types > lodash:
+        patched: '2020-05-12T04:55:41.152Z'
+    - es2020 > babel-core > babel-register > babel-core > babel-template > babel-traverse > lodash:
+        patched: '2020-05-12T04:55:41.152Z'
+    - es2020 > babel-core > babel-register > babel-core > babel-helpers > babel-template > lodash:
+        patched: '2020-05-12T04:55:41.152Z'
+    - es2020 > babel-core > babel-register > babel-core > babel-template > babel-traverse > babel-types > lodash:
+        patched: '2020-05-12T04:55:41.152Z'
+    - es2020 > babel-core > babel-register > babel-core > babel-helpers > babel-template > babel-types > lodash:
+        patched: '2020-05-12T04:55:41.152Z'
+    - es2020 > babel-core > babel-register > babel-core > babel-helpers > babel-template > babel-traverse > lodash:
+        patched: '2020-05-12T04:55:41.152Z'
+    - es2020 > babel-core > babel-register > babel-core > babel-helpers > babel-template > babel-traverse > babel-types > lodash:
+        patched: '2020-05-12T04:55:41.152Z'
